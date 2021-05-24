@@ -11,15 +11,15 @@ namespace HivePSTL.Models
         public string Id { get;set; }
 
         public string UserId { get; set; }
-        //if(UserName)
+        //if[UserName]
         public string UserName { get; set; }
-        //Endif(UserName)
+        //endif[UserName]
         public string Content { get; set; }
-        //if(Created)
+        //if[Created]
         public DateTime Created { get; set; }
-        //Endif(Created)
-        //if(LastUpdated)
+        //endif[Created]
+        //if[LastUpdated]
         public DateTime LastUpdated { get; set; }
-        //Endif(LastUpdated)
+        //endif[LastUpdated]
     }
 }

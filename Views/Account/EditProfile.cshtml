@@ -1,5 +1,5 @@
 @model UserProfileViewModel
-<!-- if(UserProfile) -->
+<!-- if[UserProfile] -->
 @{
   ViewData["Title"] = "Edit Profile";
 }
@@ -25,41 +25,41 @@
         <input asp-for="Email" class="form-control" />
         <span asp-validation-for="Email" class="text-danger"></span>
       </div>
-      <!-- if(MobilePhone) -->
+      <!-- if[MobilePhone] -->
       <div class="form-group">
         <label asp-for="MobilePhone" class="control-label"></label>
         <input asp-for="MobilePhone" class="form-control" />
         <span asp-validation-for="MobilePhone" class="text-danger"></span>
       </div>
-      <!-- Endif(MobilePhone) -->
-      <!-- if(title) -->
+      <!-- endif[MobilePhone] -->
+      <!-- if[title] -->
       <div class="form-group">
         <label asp-for="Title" class="control-label"></label>
         <input asp-for="Title" class="form-control" />
         <span asp-validation-for="Title" class="text-danger"></span>
       </div>
-      <!-- Endif(title) -->
-      <!-- if(PostalAddress) -->
+      <!-- endif[title] -->
+      <!-- if[PostalAddress] -->
       <div class="form-group">
         <label asp-for="PostalAddress" class="control-label"></label>
         <input asp-for="PostalAddress" class="form-control" />
         <span asp-validation-for="PostalAddress" class="text-danger"></span>
       </div>
-      <!-- Endif(PostalAddress) -->
-      <!-- if(City) -->
+      <!-- endif[PostalAddress] -->
+      <!-- if[City] -->
       <div class="form-group">
         <label asp-for="City" class="control-label"></label>
         <input asp-for="City" class="form-control" />
         <span asp-validation-for="City" class="text-danger"></span>
       </div>
-      <!-- Endif(City) -->
-      <!-- if(CountryCode) -->
+      <!-- endif[City] -->
+      <!-- if[CountryCode] -->
       <div class="form-group">
         <label asp-for="CountryCode" class="control-label"></label>
         <input asp-for="CountryCode" class="form-control" />
         <span asp-validation-for="CountryCode" class="text-danger"></span>
       </div>
-      <!-- Endif(CountryCode) -->
+      <!-- endif[CountryCode] -->
       <div class="form-group">
         <input type="submit" value="Save-Changes" class="btn btn-primary" />
       </div>
@@ -72,7 +72,7 @@
 </div>
 
 @section Scripts {
-  @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+  @{await Html.RenderPartialAsync["_ValidationScriptsPartial"];}
 }
 
-<!-- Endif(UserProfile) -->
+<!-- endif[UserProfile] -->

@@ -36,7 +36,7 @@ namespace HivePSTL.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        //if(UserProfile)
+        //if[UserProfile]
         public async Task<IActionResult> Profile()
         {
             var user = await GetOktaUser();
@@ -85,7 +85,7 @@ namespace HivePSTL.Controllers
             return View(profile);
         }
 
-        //Endif(UserProfile)
+        //endif[UserProfile]
 
         public IActionResult Logout()
         {

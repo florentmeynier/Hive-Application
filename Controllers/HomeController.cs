@@ -25,13 +25,13 @@ namespace HivePSTL.Controllers
             return View();
         }
 
-        //if(Group)
+        //if[Group]
         [Authorize(Roles="Everyone")]
         public IActionResult Everyone()
         {
             return View();
         }
-        //Endif(Group)
+        //endif[Group]
 
         [Authorize]
         public ActionResult Profile()
