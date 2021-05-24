@@ -1,0 +1,20 @@
+@model IEnumerable<HivePSTL.Models.Post>
+
+<h1>List of Posts</h1>
+@foreach(var post in Model)
+            {
+                <div class="idea">
+                    <span style="color: black;">Created By: @post.UserName on @post.Created.ToLocalTime()</span>
+                    <span style="color: black;">Last Updated: @post.LastUpdated.ToLocalTime()</span>
+                    <div>
+                        @post.Content
+                    </div>
+                    @if (User.Identity.IsAuthenticated && User.Claims.FirstOrDefault(c=>c.Type == System.Security.Claims.ClaimTypes.NameIdentifier).Value == post.UserId)
+                    {
+                        <a asp-action="Edit" asp-route-id="@post.Id">edit</a>
+                        <a asp-action="Delete" asp-route-id="@post.Id">delete</a>
+                    }
+                </div>
+            }
+<hr/>
+<a class="create" asp-action="Create">Add New Post</a>

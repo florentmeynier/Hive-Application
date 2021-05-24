@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @Html.Partial("_Favicons")
+    <title>@ViewData["Title"] - HivePSTL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- if theme ressources -->
+    <link rel="stylesheet" href="~/css/site.css" />
+    <!-- Endif theme ressources -->
+    <style>
+			.fa {  
+                font-size: 30px;
+                width: 50px;
+                text-align: center;
+                text-decoration: none;
+                margin: 10px 12px 0 0;
+                float: right;
+			}
+
+			.fa:hover {
+				opacity: 0.1;
+			}
+
+			.fa-facebook {
+			    background: lightgray;
+                color: black;
+			}
+
+			.fa-twitter {
+			    background: lightgray;
+                color: black;
+			}
+            .fa-instagram {
+                background: lightgray;
+                color: black;
+            }
+    </style>
+</head>
+<body style='background: darkgrey'>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style='background: lightgrey'>
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">HivePSTL</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse justify-content-between">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Everyone">Everyone</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Post" asp-action="Index">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-muted" style='position: fixed; bottom: 0; background: lightgrey'>
+        <div id="social-buttons">
+
+            <a href="https://facebook.com/" class="fa fa-facebook"></a>
+		    <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <a href="https://instagram.com/" class="fa fa-instagram"></a>
+        </div>
+        <div class="container">
+            &copy; @DateTime.Now.Year - HivePSTL - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

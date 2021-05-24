@@ -1,0 +1,9 @@
+@model HivePSTL.Models.Post
+
+<form asp-action="Create">
+    <fieldset class="idea-form">
+        <h2>Submit a Post</h2>
+        @Html.TextAreaFor(m=>m.Content)
+        <input type="submit" name="Create"/>
+    </fieldset>
+</form>
