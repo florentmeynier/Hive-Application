@@ -26,7 +26,6 @@ namespace HivePSTL.Controllers
             });
         }
 
-        //if Login
         public IActionResult Login()
         {
             if (!HttpContext.User.Identity.IsAuthenticated)
@@ -36,9 +35,8 @@ namespace HivePSTL.Controllers
 
             return RedirectToAction("Index", "Home");
         }
-        //Endif Login
 
-        //if Profile
+        //if(UserProfile)
         public async Task<IActionResult> Profile()
         {
             var user = await GetOktaUser();
@@ -87,9 +85,8 @@ namespace HivePSTL.Controllers
             return View(profile);
         }
 
-        //Endif Profile
+        //Endif(UserProfile)
 
-        //if Login
         public IActionResult Logout()
         {
             return new SignOutResult(new[]
@@ -98,7 +95,7 @@ namespace HivePSTL.Controllers
                 CookieAuthenticationDefaults.AuthenticationScheme
             });
         }
-        //Endif Login
+
         private async Task<IUser> GetOktaUser()
         {  
              
@@ -107,6 +104,5 @@ namespace HivePSTL.Controllers
             return await oktaClient.Users.GetUserAsync(subject);
         }
 
-        //Endif Profile
     }
 }

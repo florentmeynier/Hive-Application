@@ -4,7 +4,6 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace HivePSTL.Models
 {
-    //if Post
     public class Post
     {
         [BsonId]
@@ -12,14 +11,15 @@ namespace HivePSTL.Models
         public string Id { get;set; }
 
         public string UserId { get; set; }
-
+        //if(UserName)
         public string UserName { get; set; }
-
+        //Endif(UserName)
         public string Content { get; set; }
-
+        //if(Created)
         public DateTime Created { get; set; }
-
+        //Endif(Created)
+        //if(LastUpdated)
         public DateTime LastUpdated { get; set; }
+        //Endif(LastUpdated)
     }
-    //endif Post
 }

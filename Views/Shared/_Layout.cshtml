@@ -7,9 +7,7 @@
     <title>@ViewData["Title"] - HivePSTL</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <!-- if theme ressources -->
     <link rel="stylesheet" href="~/css/site.css" />
-    <!-- Endif theme ressources -->
     <style>
 			.fa {  
                 font-size: 30px;
@@ -75,12 +73,19 @@
     </div>
 
     <footer class="footer text-muted" style='position: fixed; bottom: 0; background: lightgrey'>
+        <!-- if(SocialMedia) -->
         <div id="social-buttons">
-
+            <!-- if(facebook) -->
             <a href="https://facebook.com/" class="fa fa-facebook"></a>
+            <!-- Endif(facebook) -->
+            <!-- if(twitter) -->
 		    <a href="https://twitter.com/" class="fa fa-twitter"></a>
+            <!-- Endif(twitter) -->
+            <!-- if(instagram) -->
             <a href="https://instagram.com/" class="fa fa-instagram"></a>
+            <!-- Endif(instagram) -->
         </div>
+        <!-- Endif(SocialMedia) -->
         <div class="container">
             &copy; @DateTime.Now.Year - HivePSTL - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>

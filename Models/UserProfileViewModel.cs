@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HivePSTL.Models
 {
-    //if Profile 
+    //if(UserProfile) 
     public class UserProfileViewModel
     {
         [Required]
@@ -16,24 +16,25 @@ namespace HivePSTL.Models
         [EmailAddress]
         public string Email { get; set; }
         
-        //if mobilePhone
+        //if(mobilePhone)
         public string MobilePhone { get; set; }
+        //Endif (mobilePhone)
 
-        //Endif mobilePhone
+        //if(PostalAddress)
         public string PostalAddress { get; set; }
+        //endif(PostalAddress)
 
-        //if title 
+        //if(title) 
         public string Title { get; set; }
-        //Endif tile
+        //Endif(title)
 
-        //if city
+        //if(city)
         public string City { get; set; }
-        //endif city
+        //endif(city)
 
-        //if countrycode
+        //if(countrycode)
         public string CountryCode { get; set; }
-
-        //endif countrycode
+        //endif(countrycode)
     }
-    //Endif Profile
+    //Endif(UserProfile)
 }

@@ -14,7 +14,6 @@ namespace HivePSTL.Controllers
     {
         private readonly PostService _postSvc;
 
-        //if Post
         public PostController (PostService postService)
         {
             _postSvc = postService;
@@ -67,7 +66,5 @@ namespace HivePSTL.Controllers
             _postSvc.Delete(id);
             return RedirectToAction("Index");
         }
-
-        //Endif Post
     }
 }

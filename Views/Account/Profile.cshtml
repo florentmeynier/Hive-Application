@@ -1,5 +1,5 @@
 @model Okta.Sdk.IUser
-
+<!-- if(UserProfile) -->
 @{
   ViewData["Title"] = "User Profile";
 }
@@ -26,38 +26,49 @@
     <dd class = "col-sm-10">
       @Html.DisplayFor(model => model.Profile.Email)
     </dd>
+    <!-- if(mobilePhone) -->
     <dt class = "col-sm-2">
       @Html.DisplayNameFor(model => model.Profile.MobilePhone)
     </dt>
     <dd class = "col-sm-10">
       @Html.DisplayFor(model => model.Profile.MobilePhone)
     </dd>
+    <!-- Endif(mobilePhone) -->
+    <!-- if(title) -->
     <dt class = "col-sm-2">
       @Html.DisplayNameFor(model => model.Profile.Title)
     </dt>
     <dd class = "col-sm-10">
       @Html.DisplayFor(model => model.Profile.Title)
     </dd>
+    <!-- Endif(title) -->
+    <!-- if(PostalAddress) -->
     <dt class = "col-sm-2">
       @Html.DisplayNameFor(model => model.Profile.PostalAddress)
     </dt>
     <dd class = "col-sm-10">
       @Html.DisplayFor(model => model.Profile.PostalAddress)
     </dd>
+    <!-- Endif(PostalAddress) -->
+    <!-- if(city) -->
     <dt class = "col-sm-2">
       @Html.DisplayNameFor(model => model.Profile.City)
     </dt>
     <dd class = "col-sm-10">
       @Html.DisplayFor(model => model.Profile.City)
     </dd>
+    <!-- Endif(city) -->
+    <!-- if(CountryCode) -->
     <dt class = "col-sm-2">
       @Html.DisplayNameFor(model => model.Profile.CountryCode)
     </dt>
     <dd class = "col-sm-10">
       @Html.DisplayFor(model => model.Profile.CountryCode)
     </dd>
+    <!-- Endif(CountryCode) -->
   </dl>
 </div>
 <div>
   <a asp-action="EditProfile">Edit Profile</a>
 </div>
+<!-- Endif(UserProfile) -->
