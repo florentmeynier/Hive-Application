@@ -2,7 +2,7 @@
 
 ## Projet
 Projet universitaire de recherche de la filière STL réalisé en binôme\
-L'objectif est de créer une application web en détectant ses fonctionnalités, puis en les annotant afin de la rendre reconfigurable.\ 
+L'objectif est de créer une application web en détectant ses fonctionnalités, puis en les annotant afin de la rendre reconfigurable.
 
 ## Application
 L'application est une application Web développer à partir du framework ASP.NET MVC, MongoDB Atlas pour la gestion de la base de donnée et utilisation des API Okta et Google afin de gérer la connexion.\
